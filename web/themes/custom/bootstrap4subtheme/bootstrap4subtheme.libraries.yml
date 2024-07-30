@@ -1,0 +1,35 @@
+global-styling:
+  css:
+    theme:
+      dist/styles/style.css: { weight: 101 }
+      https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap: { type: external }
+  js:
+    dist/scripts/main.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
+font-awesome:
+  remote: http://fontawesome.io/
+  version: 6.4.0
+  license:
+    name: SIL OFL 1.1
+    url: http://fontawesome.io/license/
+    gpl-compatible: true
+  css:
+    base:
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css: { type: external, minified: true }
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js: { type: external, minified: true }
+
+slick:
+  version: 1.x
+  css:
+    theme:
+      libraries/slick/slick.css: {}
+      libraries/slick/slick-theme.css: {}
+  js:
+    libraries/slick/slick.min.js: {}
+  dependencies:
+    - core/jquery

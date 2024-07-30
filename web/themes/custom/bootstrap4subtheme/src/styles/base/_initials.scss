@@ -1,0 +1,78 @@
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+  @include clearfix;
+  font-family: $montserrat;
+  @include font-smoothing(antialiased);
+  @include margin(0, 0, 0, 0);
+  @include padding(0, 0, 0, 0);
+}
+
+body {
+  background-color: $white;
+  color: $black;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.slick-list {
+  margin: 0 -10px;
+}
+.slick-prev:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f104";
+  font-size: 2rem;
+  color: #9ba5ac;
+}
+.slick-prev:hover::before {
+  color: $deep-blue;
+}
+
+.slick-next:before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f105";
+  font-size: 2rem;
+  color: #9ba5ac;
+}
+.slick-next:hover::before {
+  color: $deep-blue;
+}
+
+.slick-prev {
+  left: -60px;
+  @include breakpoint($lg-only) {
+    left: -35px;
+  }
+}
+
+.slick-next {
+  right: -60px;
+  @include breakpoint($lg-only) {
+    right: -35px;
+  }
+}
+
+.slick-dots {
+  bottom: -30px; /* Adjust position of the dots */
+}
+.slick-dots li button:before {
+  font-size: 12px; /* Adjust dot size */
+  color: $white; /* Change dot color */
+  opacity: 1; /* Ensure dots are fully visible */
+  border: 2px solid $deep-blue;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button:before {
+  color: $deep-blue; /* Change color of active dot */
+  border: none;
+  font-size: 24px;
+}
+.slick-dots li.slick-active button:before {
+  top: 2px;
+}

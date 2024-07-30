@@ -1,0 +1,22 @@
+// for only min width
+$xxs: 0;
+$xs: 320px; // (min-width: 320px)
+$sm: 576px; // (min-width: 576px)
+$md: 768px; // (min-width: 768px)
+$lg: 992px; // (min-width: 992px)
+$xl: 1200px; // (min-width: 1200px)
+$xxl: 1440px; // (min-width: 1440px)
+
+// for min and max width
+$xs-only: $xxs ($sm - 1); // 0 - 575px
+$sm-only: $sm ($md - 1); // 576px - 767px
+$md-only: $md ($lg - 1); // 768px - 991px
+$lg-only: $lg ($xl - 1); // 992px - 1199px
+$xl-only: $xl ($xxl); // 1200px - 1440px
+
+
+// for only max width.
+$sm-down: $xxs ($md - 1); // 0 - 767px
+$md-down: $xxs ($lg - 1); // 0 - 991px
+$lg-down: $xxs ($xl - 1); // 0 - 1199px
+$xl-down: $xxs ($xxl); // 0 - 1440px;

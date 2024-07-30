@@ -1,0 +1,229 @@
+$image-root: "/themes/custom/bootstrap4subtheme/build/css/../../../../../../themes/custom/bootstrap4subtheme/assets/img/";
+.card__carousel {
+  margin: 10px;
+  overflow: hidden;
+  max-height: fit-content;
+  @include breakpoint($lg) {
+    max-height: 379px;
+  }
+  @include breakpoint($lg-only) {
+    max-height: 415px;
+  }
+  .tab__content {
+    figure {
+      width: 100%;
+      height: 200px;
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      img.tab__card--img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        overflow: hidden;
+        transition: transform 0.5s ease;
+        transform-origin: center;
+      }
+      img.tab__card--defaultimg {
+        width: 64px;
+        height: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        overflow: hidden;
+        transition: transform 0.5s ease;
+        transform-origin: center;
+      }
+      .default-img-text {
+        position: absolute;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        top: 60%;
+        transform: translate(-50%, 15px);
+        font-size: 1rem;
+        font-weight: 600;
+        transition: transform 0.5s ease;
+        transform-origin: center;
+      }
+      .tab__card--img-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        ul {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          list-style-type: none;
+          .tab__card--star {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: url(#{$image-root} + "star-label.svg");
+          }
+          .tab__card--price {
+            width: 60px;
+            height: 26px;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid #ffffff;
+            padding: 5px 13px;
+            color: $white;
+            @include font-size(14px);
+            font-weight: 500;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .card-body {
+      padding: 20px 30px 15px 30px;
+      background-color: $white;
+      transition: transform 0.5s ease;
+      transform-origin: center;
+      .tab__card--heading {
+        @include font-size(18px);
+        @include line-height(24px);
+        font-weight: 600;
+        color: $card-heading;
+      }
+      .tab__card--tags {
+        @include breakpoint($md-down) {
+          @include font-size(12px);
+          @include line-height(14px);
+        }
+        @include font-size(14px);
+        @include line-height(15px);
+        font-weight: 600;
+        color: $card-text;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        margin: 0;
+        position: relative;
+        left: 7px;
+        &::before {
+          display: inline-block;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 6 Free";
+          content: "\f02c";
+          font-weight: 900;
+          transform: rotate(-270deg);
+          position: relative;
+          right: 8px;
+          color: $icon-gray;
+        }
+      }
+      .tab__card--date {
+        @include breakpoint($md-down) {
+          @include font-size(12px);
+          @include line-height(14px);
+        }
+        @include font-size(14px);
+        @include line-height(15px);
+        font-weight: 600;
+        color: $card-text;
+        position: relative;
+        left: 0px;
+        padding: 20px 0;
+        &::before {
+          display: inline-block;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 6 Free";
+          content: "\f073";
+          font-weight: 900;
+          padding-right: 5px;
+          color: $icon-gray;
+        }
+      }
+      .tab__card--location {
+        @include breakpoint($md-down) {
+          @include font-size(12px);
+          @include line-height(14px);
+        }
+        @include font-size(14px);
+        @include line-height(15px);
+        font-weight: 600;
+        color: $card-text;
+        position: relative;
+        left: 0px;
+        &::before {
+          display: inline-block;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 6 Free";
+          content: "\f3c5";
+          font-weight: 900;
+          padding-right: 5px;
+          color: $icon-red;
+        }
+      }
+    }
+    .tab__card--footer {
+      list-style-type: none;
+      border-top: 1px solid #f0f0f0;
+      background-color: $white;
+      @include breakpoint($lg) {
+        transform: translateY(43px);
+        height: 0;
+      }
+      display: flex;
+      transition: transform 0.5s ease;
+      transform-origin: center;
+      overflow: hidden;
+      li {
+        border-right: 1px solid #f0f0f0;
+        padding: 10px 0;
+        a {
+          color: $icon-gray;
+          transition: all 0.2s ease;
+          &:hover {
+            color: $blue;
+          }
+        }
+        &:last-child {
+          a {
+            @include font-size(16px);
+            @include line-height(20px);
+            font-weight: 600;
+            color: $blue;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            &:hover {
+              color: $deep-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    img.tab__card--img {
+      transform: scale(1.1);
+    }
+    img.tab__card--defaultimg {
+      transform: translate(-50%, -50%) scale(1.1) !important;
+    }
+    .default-img-text {
+      transform: translate(-50%, 15px) scale(1.1) !important;
+    }
+    .tab__card--footer {
+      @include breakpoint($lg) {
+        transform: translateY(-43px);
+        display: flex;
+        height: auto;
+      }
+    }
+    .card-body {
+      @include breakpoint($lg) {
+        transform: translateY(-47px);
+      }
+    }
+  }
+}

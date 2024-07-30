@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * bootstrap4subtheme theme file.
+ */
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for node templates.
+ */
+function bootstrap4subtheme_theme_suggestions_node_alter(array &$suggestions, array $variables) {
+  // Get the node object from the variables array.
+  if (isset($variables['elements']['#node'])) {
+    $node = $variables['elements']['#node'];
+
+    // Check if the node is of the specific content type (e.g., 'article').
+    if ($node->getType() == 'page') {
+      // Add a template suggestion for the specific node ID.
+      $suggestions[] = 'node__page__' . $node->id();
+
+      // Add a generic suggestion for all articles.
+      $suggestions[] = 'node__page';
+    }
+  }
+}
+
+function bootstrap4subtheme_preprocess_html(&$variables) {
+  // Add custom CSS with high priority
+  $variables['#attached']['library'][] = 'bootstrap4subtheme/global-styling';
+}
+
+function bootstrap4subtheme_preprocess(&$variables, $hook)
+{
+    $variables['base_path'] = base_path();
+}

@@ -1,0 +1,84 @@
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "base/screenres";
+@import "base/colors";
+@import "base/mixins";
+@import "base/fonts";
+@import "base/initials";
+@import "components/card";
+
+$image-root: "/themes/custom/bootstrap4subtheme/build/css/../../../../../../themes/custom/bootstrap4subtheme/assets/img/";
+body {
+  .nav.nav-tabs {
+    border-bottom: 2px solid $blue;
+    .nav-item {
+      @include breakpoint($md-down) {
+        word-wrap: break-word;
+        @include font-size(12px);
+        line-height: normal;
+        padding: 8px;
+        text-align: center;
+      }
+      color: $blue;
+      @include font-size(18px);
+      border-radius: 0;
+      transition: all 0.2s ease;
+      position: relative;
+      font-weight: 500;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      flex: 1 1 auto !important;
+      text-align: center;
+      &:hover {
+        border: none;
+        background-color: $icon-light-gray;
+        border-bottom: 1px solid $blue;
+      @include line-height(30px);
+      @include breakpoint($md-down) {
+        line-height: normal;
+      }
+      }
+      &.active {
+        @include breakpoint($md-down) {
+          word-wrap: break-word;
+          @include font-size(12px);
+          line-height: normal;
+        }
+        color: $deep-gray;
+        @include font-size(24px);
+        @include line-height(30px);
+        border: none;
+        border-bottom: 1px solid $blue;
+        font-weight: 600;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &::after {
+          border: 10px solid transparent;
+          border-top-color: #ffffff;
+        }
+        &::before {
+          border: 13px solid transparent;
+          border-top-color: $blue;
+        }
+        &:hover {
+          &::after {
+            border: 10px solid transparent;
+            border-top-color: $icon-light-gray;
+          }
+        }
+      }
+    }
+    @include breakpoint($md-down) {
+      flex-wrap: nowrap;
+    }
+  }
+  #nav-tabContent {
+    margin-top: 20px;
+    padding: 0 30px;
+  }
+}

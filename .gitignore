@@ -1,0 +1,63 @@
+# Ignore the Drupal core files and modules that are managed via Composer
+/vendor/
+composer.lock
+node_modules/
+
+# Ignore Drupal's temporary and cache files
+/sites/*/files/*
+/sites/*/private/*
+/sites/*/settings.php
+
+# Ignore private configuration files
+/sites/*/settings.local.php
+/sites/*/settings.php
+
+# Ignore environment-specific configuration files
+/.env
+
+# Ignore development files
+*.log
+*.tmp
+*.swp
+
+# Ignore IDE and editor-specific files
+/.idea/
+/.vscode/
+/*.sublime-project
+/*.sublime-workspace
+
+# Ignore build artifacts and node modules
+/build/
+/dist/
+*.tgz
+*.zip
+*.tar
+*.gz
+
+# Ignore Drupal's generated files and directories
+/.phpunit.result.cache
+/.php_cs.cache
+/.php_cs.dist
+/.php_cs
+/.phpunit
+
+# Ignore Drupal's debug and cache directories
+/.sass-cache/
+/*.cache
+/.cache/
+/*.log
+/coverage/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore Drupal 8/9 specific
+/core/
+/modules/contrib/
+/themes/contrib/
+
+# Custom files and directories
+/.htaccess
+/.web/
+/sites/default/files/

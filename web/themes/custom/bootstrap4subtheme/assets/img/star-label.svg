@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+	<title>New Project</title>
+	<defs>
+		<image  width="50" height="50" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAAXNSR0IB2cksfwAAABVQTFRFAAAAAMxmEdFvEtFvEtFvFM9wEtFwk7b6tAAAAAd0Uk5TAAV14/9A4B66YxIAAACuSURBVHicdcsrFoNAEAXRbo+Iig6caBRLSDxLxbM55j/9eV22zmXeVkIxv3c4aOHvB5ObjxcmF/8CQsFZruAkEpxE8MkEn0zgKQSeQtCpBJ1KwGkEnEb86cSfTtwZxJ1B7JnEnknMEcQcQfSRRB9J1FFEHUXk0UQeTcQxRBxD5rFkHkvGcWQcR/rxpB9P2gGkHUDqQaQeRMqBpBxI8sEkH0zSCUg6ASH+B4T4DAg9ADYwyJ1G/90AAAAASUVORK5CYII="/>
+		<image  width="13" height="13" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAAAXNSR0IB2cksfwAAAH5QTFRFAAAA////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////766GkgAAACp0Uk5TAATLAkT/OMq8GBM+cJW995NuN5KNiod1ceHa/QEbF0/tOj/vSVt/BYZZi16taQAAAHlJREFUeJxjZAABRkbGv2AazGNhZPyF4LH/Y/4B53H+YWBg/QbicQP1MAJZXD85gAzhTwxwwM/IIPoBxhF8BdQn/g7CEX4BNkXyDYgj+gxsJjMTWEqM8QmIJ/sColLyEYgn/0ya8b4S4yP5OyCeKuPt/wwM6oyM1xkAhicZNI6/bNYAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+	<use id="Layer 1" href="#img2" x="8" y="6"/>
+</svg>
